@@ -424,7 +424,7 @@ code {
     max-width: 320px;
   }
   .card-list {
-    align-items: center;
-    min-width: none;
+    align-items: center !important;
+    min-width: auto !important;
   }
 }
