@@ -23,42 +23,85 @@ function App() {
     return (
         <div>
             <div className="header_background">
-                <nav className="header_nav header_nav_background">
-                    <a href="#" className="header_logo header_item_link">
-                        Экзмпл
-                    </a>
-                    <span className="header_item">
-                        <a href="#" className="header_item_link" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Кухня
+                <nav className="header_nav_background header_nav">
+                    
+                        <a href="#" className="header_logo header_item_link">
+                            Экзмпл
                         </a>
-                        <div className="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                            <a className="dropdown-item" href="#" data-toggle="modal" data-target="#exampleModal">Итальянская</a>
-                            <a className="dropdown-item" href="#" data-toggle="modal" data-target="#exampleModal">Французская</a>
-                            <a className="dropdown-item" href="#" data-toggle="modal" data-target="#exampleModal">Греческая</a>
-                        </div>
-                    </span>
-                    <span className="header_item">
-                        <a href="#" data-toggle="modal" data-target="#exampleModal" className="header_item_link">
-                            Адреса ресторанов
-                        </a>
-                    </span>
-                    <span className="header_item">
-                        <a href="#" data-toggle="modal" data-target="#exampleModal" className="header_item_link">
-                            О компании
-                        </a>
-                    </span>
-                    <span className="header_item">
-                        <a href="#" data-toggle="modal" data-target="#exampleModal" className="header_item_link">
-                            Контакты
-                        </a>
-                    </span>
-                    <span className="header_item">
-                        <a href="#" data-toggle="modal" data-target="#exampleModal" className="header_item_link">
-                            <img src={phone} className="header-phone header-icon"></img>
-                            <span>7-xxx-xxxxxxx</span>
-                        </a>
-                    </span>
+                        <button className="hamburger">
+                            <span className="navbar-toggler-icon"></span>
+                        </button>
+                    <div className="header_nav_wrapper">
+                    <ul>
+                        <li className="header_item">
+                            <a id="typesMenu" href="#" className="header_item_link" role="button">
+                                Кухня
+                            </a>
+                            <div id="typesMenuDropdown" className="custom_dropdown">
+                                    <a className="custom_dropdown_item" href="#" data-toggle="modal" data-target="#exampleModal">Итальянская</a>
+                                    <a className="custom_dropdown_item" href="#" data-toggle="modal" data-target="#exampleModal">Французская</a>
+                                    <a className="custom_dropdown_item" href="#" data-toggle="modal" data-target="#exampleModal">Греческая</a>
+                            </div>
+                        </li>
+                        <li className="header_item">
+                            <a href="#" data-toggle="modal" data-target="#exampleModal" className="header_item_link">
+                                Адреса ресторанов
+                            </a>
+                        </li>
+                        <li className="header_item">
+                            <a href="#" data-toggle="modal" data-target="#exampleModal" className="header_item_link">
+                                О компании
+                            </a>
+                        </li>
+                        <li className="header_item">
+                            <a href="#" data-toggle="modal" data-target="#exampleModal" className="header_item_link">
+                                Контакты
+                            </a>
+                        </li>
+                        <li className="nav-item header_item">
+                            <a href="#" data-toggle="modal" data-target="#exampleModal" className="header_item_link header_phone_top">
+                                <img src={phone} className="header-phone header-icon"></img>
+                                <span>7-xxx-xxxxxxx</span>
+                            </a>
+                        </li>
+                    </ul>
+                    </div>
                 </nav>
+                <div className="header_expand_nav_wrapper header_nav_background">
+                    <ul>
+                        <li className="header_item">
+                            <a id="typesMenuExpanded" href="#" className="header_item_link" role="button">
+                                Кухня
+                            </a>
+                            <div id="typesMenuExpandedDropdown" className="header_expanded_list">
+                                    <a className="header_item_link" href="#" data-toggle="modal" data-target="#exampleModal">Итальянская</a>
+                                    <a className="header_item_link" href="#" data-toggle="modal" data-target="#exampleModal">Французская</a>
+                                    <a className="header_item_link" href="#" data-toggle="modal" data-target="#exampleModal">Греческая</a>
+                            </div>
+                        </li>
+                        <li className="header_item">
+                            <a href="#" data-toggle="modal" data-target="#exampleModal" className="header_item_link">
+                                Адреса ресторанов
+                            </a>
+                        </li>
+                        <li className="header_item">
+                            <a href="#" data-toggle="modal" data-target="#exampleModal" className="header_item_link">
+                                О компании
+                            </a>
+                        </li>
+                        <li className="header_item">
+                            <a href="#" data-toggle="modal" data-target="#exampleModal" className="header_item_link">
+                                Контакты
+                            </a>
+                        </li>
+                        <li className="nav-item header_item">
+                            <a href="#" data-toggle="modal" data-target="#exampleModal" className="header_item_link">
+                                <img src={phone} className="header-phone header-icon"></img>
+                                <span>7-xxx-xxxxxxx</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
 
             <div className="line-intro upper-line" />
@@ -218,7 +261,7 @@ function App() {
                             <div className="footer-bottomBlock-item font150">
                                 Связаться с нами:
                             </div>
-                            <div className="footer-bottomBlock-item">
+                            <div className="footer-bottomBlock-item phoneIconWithNumber">
                                 <img src={phone} className="footer-icon footer-phone"></img>
                                 <span className="font125">7-xxx-xxxxxxx</span>
                             </div>
@@ -248,6 +291,7 @@ function App() {
             </div>
 
             {/* modal end */}
+
         </div>
     );
 }
