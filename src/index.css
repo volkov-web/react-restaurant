@@ -427,4 +427,8 @@ code {
     align-items: center !important;
     min-width: auto !important;
   }
+  .intro_carousel_wrapper {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
 }
